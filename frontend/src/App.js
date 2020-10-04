@@ -1,11 +1,19 @@
 import React from 'react'
-
-import './css/style.css'
+import { Container } from 'react-bootstrap'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 
 const App = () => {
   return (
     <>
-      <h1>Welcome to Tech Shop</h1>
+      <Header />
+      <main className='py-3'>
+        <Container>
+          <h2>Welcome to Tech Shop</h2>
+        </Container>
+      </main>
+
+      <Footer />
     </>
   )
 }
