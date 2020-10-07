@@ -1,0 +1,30 @@
+{
+  "name": "techshop",
+  "version": "1.0.0",
+  "description": "shopping cart for tech hardware built with MERN",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleKnolleLynch/techshop.git"
+  },
+  "author": "Kyle Lynch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyleKnolleLynch/techshop/issues"
+  },
+  "homepage": "https://github.com/KyleKnolleLynch/techshop#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}

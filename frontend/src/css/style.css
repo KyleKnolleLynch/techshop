@@ -12,3 +12,7 @@ body {
 main {
   min-height: 80vh;
 }
+
+.rating span {
+  margin: 1px;
+}
