@@ -36,7 +36,7 @@ const ShippingScreen = ({ history }) => {
             <Form.Control
               type='text'
               placeholder='Enter Address'
-              value={address}
+              value={address || ''}
               required
               onChange={(e) => setAddress(e.target.value)}
             ></Form.Control>
@@ -46,7 +46,7 @@ const ShippingScreen = ({ history }) => {
             <Form.Control
               type='text'
               placeholder='Enter City'
-              value={city}
+              value={city || ''}
               required
               onChange={(e) => setCity(e.target.value)}
             ></Form.Control>
@@ -56,7 +56,7 @@ const ShippingScreen = ({ history }) => {
             <Form.Control
               type='text'
               placeholder='Enter State'
-              value={curState}
+              value={curState || ''}
               required
               onChange={(e) => setCurState(e.target.value)}
             ></Form.Control>
@@ -66,7 +66,7 @@ const ShippingScreen = ({ history }) => {
             <Form.Control
               type='text'
               placeholder='Enter Postal Code'
-              value={postalCode}
+              value={postalCode || ''}
               required
               onChange={(e) => setPostalCode(e.target.value)}
             ></Form.Control>
@@ -76,7 +76,7 @@ const ShippingScreen = ({ history }) => {
             <Form.Control
               type='text'
               placeholder='Enter Country'
-              value={country}
+              value={country || ''}
               required
               onChange={(e) => setCountry(e.target.value)}
             ></Form.Control>
