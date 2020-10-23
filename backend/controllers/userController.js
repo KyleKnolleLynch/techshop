@@ -24,7 +24,6 @@ const authUser = asyncHandler(async (req, res) => {
   }
 })
 
-
 //  @desc     Register a new user
 //  @route    POST /api/users
 //  @access   Public
@@ -36,12 +35,12 @@ const registerUser = asyncHandler(async (req, res) => {
   if (userExists) {
     res.status(400)
     throw new Error('User already exists')
-  } 
+  }
 
   const user = await User.create({
-    name, 
+    name,
     email,
-    password
+    password,
   })
 
   if (user) {
@@ -53,11 +52,10 @@ const registerUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     })
   } else {
-    res.status(400) 
+    res.status(400)
     throw new Error('Invalid user data')
   }
 })
-
 
 //  @desc     Get user profile
 //  @route    GET /api/users/profile
@@ -77,7 +75,6 @@ const getUserProfile = asyncHandler(async (req, res) => {
     throw new Error('User not found')
   }
 })
-
 
 //  @desc     Update user profile
 //  @route    PUT /api/users/profile
@@ -101,11 +98,18 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       isAdmin: updatedUser.isAdmin,
       token: generateToken(updatedUser._id),
     })
-
   } else {
     res.status(404)
     throw new Error('User not found')
   }
 })
 
-export { authUser, registerUser, getUserProfile, updateUserProfile }
+//  @desc     Get all users
+//  @route    GET /api/users
+//  @access   Private/Admin
+const getUsers = asyncHandler(async (req, res) => {
+  const users = await User.find({})
+  res.json(users)
+})
+
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers }
