@@ -27,6 +27,10 @@ h3 {
   padding: 0.8rem 0;
 }
 
+#basic-navbar-nav {
+  transition: 300ms ease-out;
+}
+
 .rating span {
   margin: 1px;
 }
