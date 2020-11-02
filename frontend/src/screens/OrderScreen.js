@@ -78,7 +78,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true)
       }
     }
-  }, [dispatch, order, orderId, successPay, successShipped])
+  }, [dispatch, order, orderId, successPay, successShipped, history, userInfo])
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult)
@@ -214,13 +214,21 @@ const OrderScreen = ({ match, history }) => {
                 </ListGroup.Item>
               )}
               {loadingShipped && <Loader />}
-              {userInfo && userInfo.isAdmin && order.isPaid && !order.isShipped && (
-                <ListGroup.Item>
-                  <Button type='button' variant='light' block onClick={shipHandler}>
-                    Mark as shipped
-                  </Button>
-                </ListGroup.Item>
-              )}
+              {userInfo &&
+                userInfo.isAdmin &&
+                order.isPaid &&
+                !order.isShipped && (
+                  <ListGroup.Item>
+                    <Button
+                      type='button'
+                      variant='light'
+                      block
+                      onClick={shipHandler}
+                    >
+                      Mark as shipped
+                    </Button>
+                  </ListGroup.Item>
+                )}
             </ListGroup>
           </Card>
         </Col>
