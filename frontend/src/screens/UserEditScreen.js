@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { getUserDetails, updateUser } from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
 import { USER_UPDATE_RESET } from '../constants/userConstants'
@@ -49,6 +50,7 @@ const UserEditScreen = ({ match, history }) => {
 
   return (
     <>
+      <Meta title='Tech Shop | Edit User (Admin)' />
       <Link to='/admin/userlist' className='btn btn-light my-3'>
         Go Back
       </Link>

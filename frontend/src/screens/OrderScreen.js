@@ -6,6 +6,7 @@ import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { getOrderDetails, payOrder, shipOrder } from '../actions/orderActions'
 import {
   ORDER_PAY_RESET,
@@ -95,6 +96,7 @@ const OrderScreen = ({ match, history }) => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
+      <Meta title='Tech Shop | Order Details' />
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>

@@ -9,7 +9,6 @@ const productsData = [
     coolingSolution: 'Wraith Prizm cooler included',
     countInStock: 2,
     rating: 4.8,
-    reviewCount: 3,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -23,7 +22,6 @@ const productsData = [
     coolingSolution: 'Wraith Prizm cooler included',
     countInStock: 3,
     rating: 4.4,
-    reviewCount: 4,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -38,7 +36,6 @@ const productsData = [
     coolingSolution: 'No cooling solution included',
     countInStock: 4,
     rating: 4.5,
-    reviewCount: 6,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -53,7 +50,6 @@ const productsData = [
     coolingSolution: 'No cooling solution included',
     countInStock: 1,
     rating: 3.9,
-    reviewCount: 2,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -67,7 +63,6 @@ const productsData = [
     coolingSolution: 'Wraith Spire cooler included',
     countInStock: 4,
     rating: 4.8,
-    reviewCount: 5,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -82,7 +77,6 @@ const productsData = [
     coolingSolution: 'No cooling solution included',
     countInStock: 5,
     rating: 5.0,
-    reviewCount: 9,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -96,7 +90,6 @@ const productsData = [
     coolingSolution: 'Wraith Spire cooler included',
     countInStock: 2,
     rating: 3.8,
-    reviewCount: 1,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },
@@ -111,7 +104,6 @@ const productsData = [
     coolingSolution: 'No cooling solution included',
     countInStock: 0,
     rating: 3.4,
-    reviewCount: 0,
     additionalInfo:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.',
   },

@@ -24,7 +24,7 @@ const Product = ({ product }) => {
           </div>
         </Card.Text>
         <Card.Text as='div'>
-          <Rating value={product.rating} text={`${product.reviews} reviews`} />
+          <Rating value={product.rating} text={`${product.reviews.length} review${product.reviews.length === 1 ? '' : 's'}`} />
         </Card.Text>
         <Card.Text as='h3' className='py-3'>${product.price}</Card.Text>
       </Card.Body>

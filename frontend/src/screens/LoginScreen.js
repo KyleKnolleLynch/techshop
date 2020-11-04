@@ -4,8 +4,10 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { login } from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse'
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState('')
@@ -32,43 +34,47 @@ const LoginScreen = ({ location, history }) => {
   }
 
   return (
-    <FormContainer>
-      <h1>Log In</h1>
-      {error && <Message variant='danger'>{error}</Message>}
-      {loading && <Loader />}
-      <Form onSubmit={submitHandler}>
-        <Form.Group controlId='email'>
-          <Form.Label>Email Address</Form.Label>
-          <Form.Control
-            type='email'
-            placeholder='Enter Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-        <Form.Group controlId='password'>
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type='password'
-            placeholder='Enter Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></Form.Control>
-        </Form.Group>
-        <Button type='submit' variant='primary' block>
-          <strong>Log In</strong>
-        </Button>
-      </Form>
-      <Row className='py-3'>
-        <Col>
-          Don't have an account?
-          {' '}
-          <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-            Register Here
-          </Link>
-        </Col>
-      </Row>
-    </FormContainer>
+    <>
+      <Meta title='Tech Shop | Login' />
+      <FormContainer>
+        <h1>Log In</h1>
+        {error && <Message variant='danger'>{error}</Message>}
+        {loading && <Loader />}
+        <Form onSubmit={submitHandler}>
+          <Form.Group controlId='email'>
+            <Form.Label>Email Address</Form.Label>
+            <Form.Control
+              type='email'
+              placeholder='Enter Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></Form.Control>
+          </Form.Group>
+          <Form.Group controlId='password'>
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type='password'
+              placeholder='Enter Password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></Form.Control>
+          </Form.Group>
+          <Button type='submit' variant='primary' block>
+            <strong>Log In</strong>
+          </Button>
+        </Form>
+        <Row className='py-3'>
+          <Col>
+            Don't have an account? &nbsp;
+            <Link
+              to={redirect ? `/register?redirect=${redirect}` : '/register'}
+            >
+              Register Here
+            </Link>
+          </Col>
+        </Row>
+      </FormContainer>
+    </>
   )
 }
 

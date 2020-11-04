@@ -11,6 +11,7 @@ import { addToCart } from '../actions/cartActions'
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 
 const ProductScreen = ({ match, history }) => {
   const [qty, setQty] = useState(1)
@@ -68,6 +69,7 @@ const ProductScreen = ({ match, history }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
+          <Meta title={product.title} />
           <Row>
             <Col md={5} lg={6}>
               <Image src={product.image} alt={product.title} fluid />
@@ -80,7 +82,9 @@ const ProductScreen = ({ match, history }) => {
                 <ListGroup.Item>
                   <Rating
                     value={product.rating}
-                    text={`${product.reviews} reviews`}
+                    text={`${product.reviews.length} review${
+                      product.reviews.length === 1 ? '' : 's'
+                    }`}
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
