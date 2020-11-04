@@ -8,3 +8,5 @@
 *  bootswatch
 *  axios
 *  bcrypt
+*  react-helmet
+*  react paypal button
