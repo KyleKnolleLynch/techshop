@@ -15,7 +15,7 @@ const HomeScreen = ({ match }) => {
   const pageNumber = match.params.pageNumber || 1
 
   const dispatch = useDispatch()
-  const productList = useSelector((state) => state.productList)
+  const productList = useSelector(state => state.productList)
   const { loading, products, error, page, pages } = productList
 
   useEffect(() => {
@@ -40,8 +40,15 @@ const HomeScreen = ({ match }) => {
       ) : (
         <>
           <Row>
-            {products.map((product) => (
-              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+            {products.map(product => (
+              <Col
+                key={product._id}
+                sm={12}
+                md={6}
+                lg={4}
+                xl={3}
+                className='align-items-stretch d-flex'
+              >
                 <Product product={product} />
               </Col>
             ))}
